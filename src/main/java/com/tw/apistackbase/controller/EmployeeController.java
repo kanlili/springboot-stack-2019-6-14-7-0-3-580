@@ -28,9 +28,10 @@ public class EmployeeController {
         employee.add(employees);
         return employee;
     }
-//    @PutMapping
-//    public List<Employees> queryEmployees(@RequestBody int id){
-//
-//        return  Employees.createEmployees(employees1);
-//    }
+    @PutMapping
+    public List<Employees> queryEmployees(@RequestBody Employees employees){
+        List<Employees>employee=Employees.createEmployees();
+        employee.set(employees.getId(),employees);
+        return  employee;
+    }
 }
