@@ -23,15 +23,21 @@ public class EmployeeController {
         return Employees.createEmployees();
     }
     @PostMapping
-    public  List<Employees>  printEmployee(@RequestBody Employees employees){
+    public  List<Employees>  postEmployee(@RequestBody Employees employees){
         List<Employees>employee=Employees.createEmployees();
         employee.add(employees);
         return employee;
     }
     @PutMapping
-    public List<Employees> queryEmployees(@RequestBody Employees employees){
+    public List<Employees> putEmployees(@RequestBody Employees employees){
         List<Employees>employee=Employees.createEmployees();
         employee.set(employees.getId(),employees);
+        return  employee;
+    }
+    @DeleteMapping
+    public List<Employees> deleteEmployees(@RequestBody Employees employees){
+        List<Employees>employee=Employees.createEmployees();
+        employee.remove(employees.getId());
         return  employee;
     }
 }
