@@ -19,15 +19,15 @@ public class Employees {
     public Employees() {
     }
 
-    public static List<Employees> createEmployees(Employees employees) {
+    public static List<Employees> createEmployees() {
         List<Employees>employee=new ArrayList<>();
-//        Employees employees=new Employees(0,"Xiaoming",20,"Male");
-//        employee.add(employees);
-//        employee.add(new Employees(1,"Xiaohong",19,"Female"));
-//        employee.add(new Employees(2,"Xiaozhi",15,"Male"));
-//        employee.add(new Employees(3,"Xiaogang",16,"Male"));
-//        employee.add(new Employees(4,"Xiaoxia",15,"Female"));
-        employee.add(employees);
+        Employees employe=new Employees(0,"Xiaoming",20,"Male");
+        employee.add(employe);
+        employee.add(new Employees(1,"Xiaohong",19,"Female"));
+        employee.add(new Employees(2,"Xiaozhi",15,"Male"));
+        employee.add(new Employees(3,"Xiaogang",16,"Male"));
+        employee.add(new Employees(4,"Xiaoxia",15,"Female"));
+        //employee.add(employees);
         return  employee;
 
     }

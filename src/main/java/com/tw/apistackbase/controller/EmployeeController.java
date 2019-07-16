@@ -17,14 +17,20 @@ public class EmployeeController {
 
     private final Logger log = Logger.getLogger(this.getClass().getName());
 
-//    @GetMapping
-//    public List<Employees> getEmployees() {
-//
-//        return Employees.createEmployees();
-//    }
+    @GetMapping
+    public List<Employees> getEmployees() {
+
+        return Employees.createEmployees();
+    }
     @PostMapping
     public  List<Employees>  printEmployee(@RequestBody Employees employees){
-        return Employees.createEmployees(employees);
+        List<Employees>employee=Employees.createEmployees();
+        employee.add(employees);
+        return employee;
     }
-
+//    @PutMapping
+//    public List<Employees> queryEmployees(@RequestBody int id){
+//
+//        return  Employees.createEmployees(employees1);
+//    }
 }
